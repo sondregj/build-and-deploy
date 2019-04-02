@@ -2,7 +2,10 @@ language: node_js
 node_js: "11"
 
 install: npm i
-script: npm run build
+script: 
+  - npm run lint
+  - npm test
+  - npm run build
 
 cache:
   directories:
