@@ -1,13 +1,16 @@
 language: node_js
-node_js: "11"
-
+node_js: '11'
 install: npm i
-script: 
-  - npm run lint
-  - npm test
-  - npm run build
-
+script:
+- npm run lint
+- npm test
+- npm run build
 cache:
   directories:
-    - node_modules
-
+  - node_modules
+deploy:
+  provider: heroku
+  app: sondregj-build-and-deploy-2019
+  skip_cleanup: true
+  api_key:
+    secure: lExkJPXwqzRf26szBJPK8dpRisBkw1nDVdro7TT648/lEB/d3S1o+9MEaQY2F15LAm2DKbyUBZ1dVprlVErftNjk1rGTwymnv4iJR7/VXzz32t/ZFjv+aLGS7LUm/ZmzrenYuQv05xfLTG1U3lJUxtJEKUw1asxovA8X1RXIZKbn1KmrE0GTxRuM6NDhbFe+UEb0n/CThYlewW4C760jYvkqwtulFkEFUsZ1b0WDa/ujiLD246OiaI3Ek0P49I1yUdXTVpCi/hGbBTAVtnTw46cWSC9CFb+bziBo4XRDr0c1zfwD6Y4StQqqHZJR8AlkINRPLAHKbGcWzhHFSzIfmOwzYz663pe/U0b0L1y5pKJKbyAYpUQvbyNF0szHp16M4tikc1YeZjodkN3c3NBMmDz7cftNpyHbRfNMOIFumH0OxDWtxznGHesMjA7SN4VraKPHJ//+HCmQRAMACTnnKjTs/1YUtmIqPZ+7Hwnx9nYzdbze7Zy0GgnN3bUwg5+Gfg2iXj7Nyf4UAkreaEI2B6FMmr9iHtRoscrUYRCDwnzDyD3UXYUfgorPrPFUWNzpN3UPXHoAVISkNAyvMpgnLbPZFAH0XP4cnvXH2+2Q7dhLu78qYiNJ/cq0JjwRSbvPqYgfWcs5gQGzGmfDJbLjtc+Taa65Zgaib2XN/unDTwk=
